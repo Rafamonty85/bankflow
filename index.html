@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BankFlow</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1f2840">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    html, body { margin: 0; height: 100%; background: #1f2840; overflow: hidden; }
+    iframe { border: 0; width: 100%; height: 100%; display: block; background: #1f2840; }
+  </style>
+</head>
+<body>
+  <!-- Tu app de BankFlow (Apps Script), sin cambios -->
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbwI5DY4-HOhjuB1k1_bRMmZ4aD0gv4bpnQUgbgKNTLGontzYXx_vnxHgb4gfAIKY9th/exec"
+    title="BankFlow"></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
